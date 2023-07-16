@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <label for="email"> email </label>
+    <input type="email" name="email" id="email">
+    <label for="password"> password </label>
+    <input type="password" name="password" id="password">
+    <label for="name_and_lastname"> Name and Lastname </label>
+    <input type="text" name="name_and_lastname" id="name_and_lastname">
+    <label for="date_of_birth"> Date of birth</label>
+    <input type="date_of_birth" name="date_of_birth" id="date_of_birth">
+    <label for="telephone_number"> Telephone number </label>
+    <input type="tel" name="telephone_number" id="telephone_number">
+
+    <label for="favourite_plan"> Choose your favourite plan</label>
+    <select name="favourite_plan" id="favourite_plan">
+      <option value="free"> Free plan </option>
+      <optgroup label="plans">
+        <option value="base">Base: €8.00/mese</option>
+        <option value="standard">Standard: €12.00/mese</option>
+        <option value="business">Business: €15.00/mese</option>
+      </optgroup>
+      <label for="piano_pro">
+      piano pro: 18 € </label>
+    <input type="checkbox" name="piano_pro" id="piano_pro">
+    </select>
+
+    <label for="credit_card_number"> Credit card number </label>
+    <input type="credit_card_number" name="Credit_card_number" id="credit_card_number">
+    <label for="cvc"> CVC </label>
+    <input type="cvc" name="cvc" id="cvc">
+    <label for="expiration_date"> Expiration date </label>
+    <input type="expiration_date" name="expiration_date" id="expiration_date">
+    <label for="billing_address"> Billing Address </label>
+    <input type="billing_address" name="billing_address" id="billing_address">
+  
+  </body>
+</html>
