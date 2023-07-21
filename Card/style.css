@@ -1,0 +1,26 @@
+body{ /* incomincio a mettere il bordo grigio */
+    border: 1px solid rgb(233, 233, 233) ;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.items{
+    border: 1px rgb(233, 233, 233) solid;
+    display: inline-block;
+}
+
+.item1 {
+    border: 1px rgb(233, 233, 233) solid;
+}
+.item2{
+    border: 1px rgb(233, 233, 233) solid;
+}
+
+.item3{
+    border: 1px rgb(233, 233, 233) solid;
+}
+
+link{
+    border: 1px rgb(233, 233, 233) solid;
+}
+
