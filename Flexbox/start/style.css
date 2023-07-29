@@ -1,7 +1,7 @@
 .sidebar {
 width:200 px;
 height:100vh;
-background-color: gray;
+background-color: rgb(230, 56, 151);
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -46,7 +46,8 @@ color: #2b2bb2;
 
 }
 
-.username{
+.Username{
     margin-top:10px; /* per crare spazio tra avatar e username */
 
 }
+
