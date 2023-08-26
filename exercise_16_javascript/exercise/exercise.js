@@ -4,9 +4,8 @@ class Person {
     constructor (firstName, lastName){
         this.firstName=firstName;
 
-        if(typeof(lastName)=== "string"){
             this.lastName = lastName; 
-        }       
+              
     }
     }
 
