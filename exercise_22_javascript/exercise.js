@@ -1,5 +1,5 @@
-const person = {
-  id: 1,
+/* const person = { 
+  id: 1, 
   firstName: 'Mario',
   lastName: 'Rossi',
   age: 25
@@ -10,4 +10,14 @@ const firstName = person.firstName;
 const lastName = person.lastName;
 const age = person.age;
 
+console.log(id, firstName, lastName, age); */
+
+const person = { 
+ id: 1, 
+  firstName: 'Mario',
+  lastName: 'Rossi',
+  age: 25
+};
+const {id,firstName,lastName,age}=person;
 console.log(id, firstName, lastName, age);
+
