@@ -1,15 +1,16 @@
 function nicknameMap(persons) {
-  const nickname = [];
+  const nickname = []; //dichiaro variabile array vuoto
   
   for (let i = 0; i < persons.length; i++) {
     const nicknames = `${persons[i].nome}-${persons[i].età}`;
-    nickname.push(nicknames); //
+    //riccardo ha usato const nicknames= person[i].name+ '-' + persons[i].age;
+    nickname.push(nicknames); // 
   }
   
   return nickname;
 } 
 
-const persone = [
+const persons = [
   { nome: 'Paul', età: 16 },
   { nome: 'George', età: 17 },
   { nome: 'Lucas', età: 21 },
@@ -22,6 +23,6 @@ const persone = [
   { nome: 'Alice', età: 28 }
 ];
 
-const nicknames = nicknameMap(persone);
-console.log(persone);
+const nicknames = nicknameMap(persons);
+console.log(persons);
 console.log(nicknames);

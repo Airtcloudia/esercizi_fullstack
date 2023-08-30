@@ -21,7 +21,7 @@ function calculateSalary(role) {
           return 1800;
           case 'developer':
             return 1500;
-            case 'other':
+            case 'other': //default: return 1000
               return 1000;
               
 
