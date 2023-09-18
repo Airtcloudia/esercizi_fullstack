@@ -1,14 +1,22 @@
+
 const number = 15;
 
-let ourPromise = new Promise ((resolve, reject) => {
-    const number = Math.number ();
-    if (number > 10) {
-        resolve(number);
-    } else {
-        reject(number);
-    }
-})
+const checknumber = (number) => { //creo una funzione per passare number
+    return new Promise((resolve, reject) => {
+        if (number > 10) {
+            resolve(`${number} è maggiore di 10`); //per passare la costante
+        } else {
+            reject(`${number} è minore di 10`);
+        };
+    });
+};
 
-ourPromise
-.then((val) => console.log(val))
-.catch((err) => console.error(err))
+
+
+checknumber(number)
+    .then((message) => {
+        console.log(message);
+    })
+    .catch((err) => {
+        console.log(err); 
+    });
