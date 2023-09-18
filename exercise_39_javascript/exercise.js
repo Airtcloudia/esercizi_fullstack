@@ -2,9 +2,9 @@ const isLogged = true;
 
 //promise chaining 
 //funzione che devo sapere se l'utente è connesso oppure no
-function isLoggedin(isLogged){
+function isLoggedin(connected){
     return new Promise ((resolve,reject)=> {
-            if(isLogged === true) {
+            if(connected === true) {
                 resolve(Math.random()); //numero a caso
             } else {
                 reject("L'utente non è connesso");
@@ -33,4 +33,5 @@ isLoggedin(isLogged)
 })
 .then((message) => console.log(message))
 .catch((err) => console.error(err))
+
 .finally(()=>console.log("operazione completata"))
