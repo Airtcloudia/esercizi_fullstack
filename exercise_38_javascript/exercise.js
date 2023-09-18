@@ -1,39 +1,36 @@
 const isLogged = true;
 
 //promise chaining 
+//funzione che devo sapere se l'utente è connesso oppure no
 function isLoggedin(isLogged){
-    return newPromise ((resolve,reject)=> {
-        setTimeout(() => {
-            let isLogged= Math.random();
-            if(isLogged > 0.5) {
-                resolve(isLogged);
+    return new Promise ((resolve,reject)=> {
+            if(isLogged === true) {
+                resolve(Math.random()); //numero a caso
             } else {
-                reject(newError("Not Logged in!"));
+                reject("L'utente non è connesso");
             }
-        }, 500);
+        
     })
 }
 
-function getUserDetails(isLogged){
-    return newPromise ((resolve,reject)=> {
-        setTimeout(() => {
-            if(isLogged < 5) {
+function getUserDetails(number){
+    return new Promise ((resolve,reject)=> {
+            if(number > 0.5) {
                 resolve({"name": "John", "age": "24"}); //json come output
             } else {
-                reject(newError("error"));
+                reject("error");
             }
-        }, 500);
+        
     })
 }
 
-function getUserName({ name }){ //destructuring
-    return name;
-}
+
 
 //concateno
-isLoggedin(3)
-.then(getUserDetails)
-.then(getUserName)
-.then((name) => console.log(name))
+isLoggedin(isLogged)
+.then((number) => {
+    return getUserDetails(number);
+})
+.then((message) => console.log(message))
 .catch((err) => console.error(err))
 
