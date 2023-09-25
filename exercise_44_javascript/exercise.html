@@ -1,0 +1,59 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; flex-direction: column; align-items: left;">
+
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+const API_URL = "https://jsonplaceholder.typicode.com/todos";
+
+
+const state = {
+  data: [],
+};
+
+
+const generateUL = (item) => {
+  return `
+    <ul>
+        <li>title: ${item.title}</li>
+   </ul>
+    `
+};
+
+
+const fetchData = async () => {
+  try {
+    const response = await fetch (API_URL, {
+     method:"GET",
+    });
+
+
+
+    state.data = await response.json();
+
+
+ 
+  } catch (error) {
+    console.error(error)
+  };
+};
+
+const renderData = () => {
+  const container = document.getElementById("container");
+  const HTML = state.data.map((item) => generateUL(item)).join("");
+  container.innerHTML = HTML; 
+}
+
+
+const init = async () => {
+  await fetchData(); 
+  renderData()
+}
+
+init()
+
+</script>
