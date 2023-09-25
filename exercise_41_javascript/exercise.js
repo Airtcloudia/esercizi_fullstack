@@ -39,3 +39,4 @@ const init = () => {
   getLocalStorage();
 }
 
+init ();
