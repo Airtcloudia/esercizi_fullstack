@@ -2,25 +2,15 @@
 
 <body>
   <div id="container" style="display: flex; align-items: center;">
-    <h2 id="title"></h2>
-    <input type="checkbox" id="checkbox">
   </div>
 </body>
-
 </html>
-
 <script>
-  const title = document.querySelector("#title");
-  const checkbox = document.querySelector("#checkbox");
-
-
+  const container = document.querySelector("#container");
   const API_URL = "https://jsonplaceholder.typicode.com/todos/4";
-
-
   const state = {
     data: [],
   };
-
 
   const fetchData = async () => {
     try {
@@ -30,31 +20,28 @@
 
       state.data = await response.json();
 
-
     } catch (error) {
-      console.error(error)
-
+      console.error(error);
     }
   };
 
-
-
   const renderData = () => {
-    title.innerHTML = `Title: ${state.data.title}`
+  const HTML = `
+    <h2>${state.data.title}</h2>
+    <input id="input" type="checkbox" value=""> `
+  ;
 
-    checkbox.checked = state.data.completed;
-  };
+  container.innerHTML = HTML;
 
-
+  const input = document.querySelector("#input");
+  input.checked = state.data.completed;
+};
 
   const init = async () => {
     await fetchData();
-    renderData()
-
-
+    renderData();
   };
 
   init();
-
 
 </script>
