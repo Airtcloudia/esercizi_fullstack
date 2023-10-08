@@ -23,10 +23,12 @@
   const formInput = document.querySelectorAll(".form-input");
 
   const printFormInput = () => {
-    formInput.forEach(input =>{
-      console.log(input.value)
-    })
-  }
+  formInput.forEach(input => {
+    if (input.type === "text") {
+      console.log(input.value);
+    }
+  });
+}
 
   printFormInput()
 </script>
